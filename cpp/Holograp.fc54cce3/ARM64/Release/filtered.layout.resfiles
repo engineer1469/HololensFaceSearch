@@ -1,0 +1,16 @@
+CubeGeometryShader.cso
+CubePixelShader.cso
+CubeVertexShader.cso
+CubeVPRTVertexShader.cso
+QuadGeometryShader.cso
+QuadPixelShaderNV12.cso
+QuadPixelShaderRGB.cso
+QuadVertexShader.cso
+QuadVPRTVertexShader.cso
+Assets\microsoft-sdk.png
+Assets\smallTile-sdk.png
+Assets\splash-sdk.png
+Assets\squareTile-sdk.png
+Assets\storeLogo-sdk.png
+Assets\tile-sdk.png
+Assets\windows-sdk.png

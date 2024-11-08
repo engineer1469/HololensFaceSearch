@@ -1,0 +1,1 @@
+D:\fun\Hololens\HolographicFaceTracking\cpp\HolographicFaceTracking.vcxproj;arm64

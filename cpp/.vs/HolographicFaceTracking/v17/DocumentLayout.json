@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\fun\\Hololens\\HolographicFaceTracking\\cpp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FC54CCE3-E460-57F0-836A-14CFF148B3B1}|HolographicFaceTracking.vcxproj|D:\\fun\\Hololens\\HolographicFaceTracking\\cpp\\Content\\FaceTrackerProcessor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FC54CCE3-E460-57F0-836A-14CFF148B3B1}|HolographicFaceTracking.vcxproj|solutionrelative:Content\\FaceTrackerProcessor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FaceTrackerProcessor.cpp",
+              "DocumentMoniker": "D:\\fun\\Hololens\\HolographicFaceTracking\\cpp\\Content\\FaceTrackerProcessor.cpp",
+              "RelativeDocumentMoniker": "Content\\FaceTrackerProcessor.cpp",
+              "ToolTip": "D:\\fun\\Hololens\\HolographicFaceTracking\\cpp\\Content\\FaceTrackerProcessor.cpp",
+              "RelativeToolTip": "Content\\FaceTrackerProcessor.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-07T15:17:46.085Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+﻿  compilation object save succeeded; see D:\fun\Hololens\HolographicFaceTracking\cpp\ARM64\Release\HolographicFaceTracking\CubePixelShader.cso
+  compilation object save succeeded; see D:\fun\Hololens\HolographicFaceTracking\cpp\ARM64\Release\HolographicFaceTracking\QuadGeometryShader.cso
+  compilation object save succeeded; see D:\fun\Hololens\HolographicFaceTracking\cpp\ARM64\Release\HolographicFaceTracking\QuadPixelShaderRGB.cso
+  compilation object save succeeded; see D:\fun\Hololens\HolographicFaceTracking\cpp\ARM64\Release\HolographicFaceTracking\QuadPixelShaderNV12.cso
+  compilation object save succeeded; see D:\fun\Hololens\HolographicFaceTracking\cpp\ARM64\Release\HolographicFaceTracking\QuadVertexShader.cso
+  compilation object save succeeded; see D:\fun\Hololens\HolographicFaceTracking\cpp\ARM64\Release\HolographicFaceTracking\QuadVPRTVertexShader.cso
+  compilation object save succeeded; see D:\fun\Hololens\HolographicFaceTracking\cpp\ARM64\Release\HolographicFaceTracking\CubeVertexShader.cso
+  compilation object save succeeded; see D:\fun\Hololens\HolographicFaceTracking\cpp\ARM64\Release\HolographicFaceTracking\CubeVPRTVertexShader.cso
+  compilation object save succeeded; see D:\fun\Hololens\HolographicFaceTracking\cpp\ARM64\Release\HolographicFaceTracking\CubeGeometryShader.cso
+  pch.cpp
+  AppView.cpp
+  QuadRenderer.cpp
+  SpinningCubeRenderer.cpp
+  FaceTrackerProcessor.cpp
+  TextRenderer.cpp
+  NV12VideoTexture.cpp
+  HolographicFaceTrackerMain.cpp
+  DeviceResources.cpp
+  CameraResources.cpp
+  VideoFrameProcessor.cpp
+D:\fun\Hololens\HolographicFaceTracking\cpp\Common\DirectXHelper.h(36,141): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file '/Common/DeviceResources.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Common\DirectXHelper.h(36,141): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file '/Content/QuadRenderer.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Common\DirectXHelper.h(36,141): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file '/Common/CameraResources.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\QuadRenderer.cpp(198,26): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+  (compiling source file '/Content/QuadRenderer.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\QuadRenderer.cpp(246,32): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+  (compiling source file '/Content/QuadRenderer.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Common\DirectXHelper.h(36,141): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file '/Content/NV12VideoTexture.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Common\DirectXHelper.h(36,141): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file '/Content/SpinningCubeRenderer.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\QuadRenderer.cpp(317,77): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+  (compiling source file '/Content/QuadRenderer.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\QuadRenderer.cpp(343,40): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file '/Content/QuadRenderer.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\QuadRenderer.cpp(349,73): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+  (compiling source file '/Content/QuadRenderer.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\SpinningCubeRenderer.cpp(177,32): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+  (compiling source file '/Content/SpinningCubeRenderer.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Common\DirectXHelper.h(36,141): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file '/Content/TextRenderer.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Common\DirectXHelper.h(36,141): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file '/HolographicFaceTrackerMain.cpp')
+  
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\SpinningCubeRenderer.cpp(274,40): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file '/Content/SpinningCubeRenderer.cpp')
+  
+  Generating code
+  Finished generating code
+  HolographicFaceTracking.vcxproj -> D:\fun\Hololens\HolographicFaceTracking\cpp\ARM64\Release\HolographicFaceTracking\HolographicFaceTracking.exe

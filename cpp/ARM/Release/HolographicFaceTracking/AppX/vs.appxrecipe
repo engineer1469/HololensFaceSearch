@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MSI</Machine>
+    <WindowsUser>seppb</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Release|ARM</SolutionConfiguration>
+    <PackageArchitecture>arm</PackageArchitecture>
+    <PackageIdentityName>2f2a98c9-6b60-4731-8378-130aa7d7ff99</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\</IntermediateOutputPath>
+    <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\AppX</LayoutDir>
+    <RegisteredManifestChecksum>0B7D1F5E579ECA679601CFF627E7FA412DCF8586F6E52E42422DE4E294545542</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>Microsoft.SDKSamples.HolographicFaceTracker.CPP_1.0.0.0_arm__8wekyb3d8bbwe</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>Microsoft.SDKSamples.HolographicFaceTracker.CPP_8wekyb3d8bbwe!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>Microsoft.SDKSamples.HolographicFaceTracker.CPP</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2024-11-07T16:02:16.039</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\HolographicFaceTracking.exe">
+      <PackagePath>HolographicFaceTracking.exe</PackagePath>
+      <Modified>2024-11-07T16:45:21.307</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\HolographicFaceTracker.winmd">
+      <PackagePath>HolographicFaceTracker.winmd</PackagePath>
+      <Modified>2024-11-06T14:40:12.445</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\CubePixelShader.cso">
+      <PackagePath>CubePixelShader.cso</PackagePath>
+      <Modified>2024-11-06T14:40:03.678</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\QuadGeometryShader.cso">
+      <PackagePath>QuadGeometryShader.cso</PackagePath>
+      <Modified>2024-11-06T14:40:03.795</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\QuadPixelShaderRGB.cso">
+      <PackagePath>QuadPixelShaderRGB.cso</PackagePath>
+      <Modified>2024-11-06T14:40:03.905</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\QuadPixelShaderNV12.cso">
+      <PackagePath>QuadPixelShaderNV12.cso</PackagePath>
+      <Modified>2024-11-06T14:40:04.010</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\QuadVertexShader.cso">
+      <PackagePath>QuadVertexShader.cso</PackagePath>
+      <Modified>2024-11-06T14:40:04.125</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\QuadVPRTVertexShader.cso">
+      <PackagePath>QuadVPRTVertexShader.cso</PackagePath>
+      <Modified>2024-11-06T14:40:04.242</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\CubeVertexShader.cso">
+      <PackagePath>CubeVertexShader.cso</PackagePath>
+      <Modified>2024-11-06T14:40:04.360</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\CubeVPRTVertexShader.cso">
+      <PackagePath>CubeVPRTVertexShader.cso</PackagePath>
+      <Modified>2024-11-06T14:40:04.481</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\CubeGeometryShader.cso">
+      <PackagePath>CubeGeometryShader.cso</PackagePath>
+      <Modified>2024-11-06T14:40:04.591</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\SharedContent\media\microsoft-sdk.png">
+      <PackagePath>Assets\microsoft-sdk.png</PackagePath>
+      <Modified>2024-11-06T14:36:06.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\SharedContent\media\smalltile-sdk.png">
+      <PackagePath>Assets\smallTile-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2024-11-06T14:36:06.319</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\SharedContent\media\splash-sdk.png">
+      <PackagePath>Assets\splash-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2024-11-06T14:36:06.340</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\SharedContent\media\squaretile-sdk.png">
+      <PackagePath>Assets\squareTile-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2024-11-06T14:36:06.387</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\SharedContent\media\storelogo-sdk.png">
+      <PackagePath>Assets\storeLogo-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2024-11-06T14:36:06.410</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\SharedContent\media\tile-sdk.png">
+      <PackagePath>Assets\tile-sdk.png</PackagePath>
+      <Modified>2024-11-06T14:36:06.432</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\SharedContent\media\windows-sdk.png">
+      <PackagePath>Assets\windows-sdk.png</PackagePath>
+      <Modified>2024-11-06T14:36:06.454</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\fun\Hololens\HolographicFaceTracking\cpp\ARM\Release\HolographicFaceTracking\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2024-11-07T16:02:15.952</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\ARM\Microsoft.VCLibs.ARM.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\ARM64\Microsoft.VCLibs.ARM64.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\x64\Microsoft.VCLibs.x64.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\x86\Microsoft.VCLibs.x86.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

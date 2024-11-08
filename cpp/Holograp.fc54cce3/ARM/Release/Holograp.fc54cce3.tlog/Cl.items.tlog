@@ -1,0 +1,11 @@
+D:\fun\Hololens\HolographicFaceTracking\cpp\AppView.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\AppView.obj
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\QuadRenderer.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\QuadRenderer.obj
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\SpinningCubeRenderer.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\SpinningCubeRenderer.obj
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\FaceTrackerProcessor.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\FaceTrackerProcessor.obj
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\TextRenderer.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\TextRenderer.obj
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\NV12VideoTexture.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\NV12VideoTexture.obj
+D:\fun\Hololens\HolographicFaceTracking\cpp\HolographicFaceTrackerMain.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\HolographicFaceTrackerMain.obj
+D:\fun\Hololens\HolographicFaceTracking\cpp\Common\DeviceResources.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\DeviceResources.obj
+D:\fun\Hololens\HolographicFaceTracking\cpp\Common\CameraResources.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\CameraResources.obj
+D:\fun\Hololens\HolographicFaceTracking\cpp\Content\VideoFrameProcessor.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\VideoFrameProcessor.obj
+D:\fun\Hololens\HolographicFaceTracking\cpp\pch.cpp;D:\fun\Hololens\HolographicFaceTracking\cpp\Holograp.fc54cce3\ARM\Release\pch.obj
