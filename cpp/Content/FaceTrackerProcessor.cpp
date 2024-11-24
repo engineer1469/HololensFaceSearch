@@ -223,12 +223,45 @@ void FaceTrackerProcessor::CaptureFaceImage(const TrackedFace& face)
 
             if (softwareBitmap)
             {
-                // Ensure bounds are within the bitmap dimensions
-                BitmapBounds adjustedBounds = face.FaceBox;
-                adjustedBounds.X = min(adjustedBounds.X, static_cast<UINT32>(softwareBitmap->PixelWidth - 1));
-                adjustedBounds.Y = min(adjustedBounds.Y, static_cast<UINT32>(softwareBitmap->PixelHeight - 1));
-                adjustedBounds.Width = min(adjustedBounds.Width, static_cast<UINT32>(softwareBitmap->PixelWidth - adjustedBounds.X));
-                adjustedBounds.Height = min(adjustedBounds.Height, static_cast<UINT32>(softwareBitmap->PixelHeight - adjustedBounds.Y));
+                // Scaling factor (e.g., 1.2 for a 20% increase)
+                double scale = 2; // Replace with your desired scaling factor
+
+                // Original bounds
+                BitmapBounds originalBounds = face.FaceBox;
+
+                // Calculate new Width and Height
+                UINT32 newWidth = static_cast<UINT32>(originalBounds.Width * scale);
+                UINT32 newHeight = static_cast<UINT32>(originalBounds.Height * scale);
+
+                // Calculate new X and Y to keep the bounding box centered
+                INT32 centerX = originalBounds.X + originalBounds.Width / 2;
+                INT32 centerY = originalBounds.Y + originalBounds.Height / 2;
+
+                INT32 newX = centerX - newWidth / 2;
+                INT32 newY = centerY - newHeight / 2;
+
+                // Ensure the new bounds are within the image dimensions
+                UINT32 bitmapWidth = softwareBitmap->PixelWidth;
+                UINT32 bitmapHeight = softwareBitmap->PixelHeight;
+
+                // Clamp newX and newY to be >= 0
+                if (newX < 0)
+                    newX = 0;
+                if (newY < 0)
+                    newY = 0;
+
+                // Adjust newWidth and newHeight if the bounding box exceeds image boundaries
+                if (static_cast<UINT32>(newX + newWidth) > bitmapWidth)
+                    newWidth = bitmapWidth - newX;
+                if (static_cast<UINT32>(newY + newHeight) > bitmapHeight)
+                    newHeight = bitmapHeight - newY;
+
+                // Set adjustedBounds
+                BitmapBounds adjustedBounds;
+                adjustedBounds.X = static_cast<UINT32>(newX);
+                adjustedBounds.Y = static_cast<UINT32>(newY);
+                adjustedBounds.Width = newWidth;
+                adjustedBounds.Height = newHeight;
 
                 // Encode to JPEG
                 create_task([this, softwareBitmap, adjustedBounds]()

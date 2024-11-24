@@ -50,7 +50,7 @@ namespace HolographicFaceTracker
         std::map<unsigned int, TrackedFace> m_trackedFaces;
 
         // The duration a face must be looked at before capturing, in seconds
-        const double m_captureThreshold = 3.0; // Replace with desired duration
+        const double m_captureThreshold = 1.0; // Replace with desired duration
 
         // Hostname and port of the laptop (replace with actual values)
         Platform::String^ m_serverHost;
