@@ -36,3 +36,5 @@ mono_crash.*
 !.idea/vcs.xml
 !.idea/jsLibraryMappings.xml
 received_face.jpg
+
+cpp/.vs/
