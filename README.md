@@ -1,6 +1,15 @@
 # HoloLens Face Search Project
 
 This project is designed for the HoloLens 2 to detect faces, send them to a laptop for searching, and then send the summary back to the HoloLens to be displayed next to the detected face. The information is displayed on a panel like "Name: Joseph", with each line for a different attribute received in the JSON data. The location of the info panel is determined by the location of the face.
+**WORK IN PROGRESS!**
+
+### TODO
+- [x] Detect Faces
+- [x] Receive detected face on server
+- [ ] Get websites from face
+- [x] Summarize webpages into profile
+- [ ] Render profile next to face
+- [ ] Fix hardcoded static server ip adress
 
 ## Installation Steps
 
@@ -48,4 +57,4 @@ This project is designed for the HoloLens 2 to detect faces, send them to a lapt
 
 ## Legal Disclaimer
 
-This project is provided "as-is" without any express or implied warranty. In no event shall the authors be held liable for any damages arising from the use of this software.
+This project is provided "as-is" without any express or implied warranty. In no event shall the authors be held liable for any damages arising from the use of this software. This project is for educational purposes only.
