@@ -38,3 +38,6 @@ mono_crash.*
 
 cpp/.vs/
 received_face.jpg
+*.log
+har_and_cookies/blackbox.json
+har_and_cookies/.nodriver_is_open
