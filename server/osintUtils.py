@@ -1,13 +1,23 @@
 import requests
+import time
 import bs4
-import g4f  # Make sure to have g4f installed
+import g4f
 import json
 import logging
 import re
+import os
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 
 # Configure logging
-logging.basicConfig(filename='osintUtils.log', level=logging.DEBUG, 
+logging.basicConfig(filename='osintUtils.log', level=logging.DEBUG,
                     format='%(asctime)s %(levelname)s:%(message)s')
+
 
 def getInfoFromPage(url):
     """
@@ -24,6 +34,7 @@ def getInfoFromPage(url):
         logging.error(f"Error fetching {url}: {e}")
         return None
 
+
 def getAllPages(links):
     """
     Takes a list of URLs and returns a list of BeautifulSoup objects for each successful fetch.
@@ -37,6 +48,7 @@ def getAllPages(links):
     logging.debug("Finished fetching all pages.")
     return all_pages
 
+
 def extractTextFromPages(all_pages):
     """
     Given a list of BeautifulSoup objects, extracts and returns concatenated text.
@@ -49,6 +61,7 @@ def extractTextFromPages(all_pages):
     logging.debug("Finished extracting text from all pages.")
     return combined_text
 
+
 def extract_json(text):
     """
     Extracts the first JSON object found in a string using a regex.
@@ -59,7 +72,8 @@ def extract_json(text):
         return match.group(0)
     return None
 
-def parse_or_retry_json_response(llm_response: str, context_text: str, max_retries: int = 2, model_name: str = "gpt-4o"):
+
+def parse_or_retry_json_response(llm_response: str, context_text: str, max_retries: int = 2, model_name: str = "deepseek-r1"):
     """
     Tries to parse the llm_response as JSON. If it fails, it re-prompts the LLM,
     requesting strictly valid JSON only.
@@ -111,6 +125,7 @@ Your previous response:
                 return None
     return None
 
+
 def getPersonInfo(links):
     logging.debug("Starting to get person info.")
     all_pages = getAllPages(links)
@@ -146,7 +161,7 @@ If any field is unknown or cannot be found, omit it.
                 {"role": "user", "content": user_input_text}
             ],
         )
-        llm_response = response  # Assuming response is a string; adjust if it's a dict.
+        llm_response = response  # Adjust if the response is a dict
         logging.debug(f"Received response from the LLM: {llm_response}")
     except Exception as e:
         logging.error(f"Error calling the LLM: {e}")
@@ -161,11 +176,126 @@ If any field is unknown or cannot be found, omit it.
     logging.debug("Finished getting person info.")
     return person_profile
 
-if __name__ == "__main__":
+
+def getLinksFromFace(face_image_path):
+    """
+    Given a face image, uses facial recognition to find the person's online presence.
+    """
+    logging.debug(f"Starting to get links from face: {face_image_path}")
+    # Placeholder for the actual implementation
     links = [
         "https://github.com/engineer1469",
         "https://www.instagram.com/seppbeld/"
     ]
-    person_profile = getPersonInfo(links)
-    logging.info("Extracted Profile Summary:")
-    logging.info(person_profile)
+    return links
+
+
+def prepBrowser():
+    """
+    Prepares a browser for use with Selenium.
+    It navigates to the login page and:
+      - If the login form is found, it enters credentials.
+      - If an email verification screen appears, it waits (up to 2 minutes)
+        for the user to complete verification.
+      - If the login form isn’t found (i.e. already logged in), it skips login.
+    Returns the browser instance.
+    """
+    # Get credentials from file
+    try:
+        with open("creds.txt", "r") as f:
+            creds = f.read().splitlines()
+            username = creds[0]
+            password = creds[1]
+    except Exception as e:
+        logging.error(f"Error reading credentials: {e}")
+        return None
+
+    # Use a dedicated Chrome profile to store the login session (universal path on Windows)
+    chrome_options = Options()
+    local_appdata = os.environ.get("LOCALAPPDATA")
+    user_data_dir = os.path.join(local_appdata, "Google", "Chrome", "User Data", "Default")
+    chrome_options.add_argument(f"user-data-dir={user_data_dir}")
+
+    try:
+        logging.debug("Starting to prepare browser.")
+        browser = webdriver.Chrome(options=chrome_options)
+        browser.get("https://pimeyes.com/en/login")
+        logging.debug("Finished preparing browser.")
+        time.sleep(2)
+    except Exception as e:
+        logging.error(f"Error launching browser: {e}")
+        return None
+
+    try:
+        # Try to locate the login form input
+        login_input = WebDriverWait(browser, 5).until(
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "#login-container > div > div > form > div:nth-child(2) > input")
+            )
+        )
+        logging.debug("Login form found; proceeding with login.")
+        login_input.clear()
+        login_input.send_keys(username)
+        login_input.send_keys(u'\ue004')  # Tab key
+
+        # Locate the password input (assumed to be the next div)
+        password_input = browser.find_element(
+            By.CSS_SELECTOR, "#login-container > div > div > form > div:nth-child(3) > input"
+        )
+        password_input.clear()
+        password_input.send_keys(password)
+        password_input.send_keys(u'\ue007')  # Enter key
+        time.sleep(10)
+
+        # Check if an email verification screen appears by locating a unique element.
+        try:
+            verification_input = WebDriverWait(browser, 5).until(
+                EC.presence_of_element_located(
+                    (By.CSS_SELECTOR, "#content > div > div.digits > input[type='tel']:nth-child(1)")
+                )
+            )
+            logging.debug("Email verification screen detected. Waiting up to 2 minutes for dashboard to load.")
+            print("Please check your email, enter the verification code in the browser, and complete verification. Waiting up to 2 minutes...")
+            # Wait until a dashboard element (only present after successful login) is found.
+            WebDriverWait(browser, 120).until(
+                EC.presence_of_element_located(
+                    (By.CSS_SELECTOR, "#sidebar-navigation > div > div > nav > div:nth-child(1) > a > span")
+                )
+            )
+        except TimeoutException:
+            logging.debug("No verification screen detected or dashboard did not load within 2 minutes after login.")
+    except TimeoutException:
+        logging.debug("Login form not found. Assuming already logged in.")
+        try:
+            # Wait for a known dashboard element to confirm that session is active.
+            WebDriverWait(browser, 10).until(
+                EC.presence_of_element_located(
+                    (By.CSS_SELECTOR, "#sidebar-navigation > div > div > nav > div:nth-child(1) > a > span")
+                )
+            )
+        except TimeoutException:
+            logging.error("Dashboard not loaded even though login form was not found.")
+    except Exception as e:
+        logging.error(f"Error during login procedure: {e}")
+
+    return browser
+
+
+if __name__ == "__main__":
+    browser = prepBrowser()
+    if browser:
+        logging.debug("Browser prepared successfully.")
+    else:
+        logging.error("Failed to prepare browser.")
+    CurrentPath = os.path.dirname(os.path.realpath(__file__))
+    Facepath = os.path.join(CurrentPath, "received_face.jpg")
+
+    # Example usage:
+    # links = getLinksFromFace(Facepath)
+    # person_profile = getPersonInfo(links)
+    # logging.info("Extracted Profile Summary:")
+    # logging.info(person_profile)
+    
+    # Keep the browser open so you can inspect the logged-in state
+    input("Press Enter to exit and close the browser...")
+    browser.quit()
